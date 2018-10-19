@@ -12,6 +12,7 @@ RUN apk update \
 	&& mv grafana-4.6.3/ grafana/ \
 	&& mkdir -p grafana/data/plugins \
 	&& ./grafana/bin/grafana-cli plugins install grafana-clock-panel \
+	&& cp -R /var/lib/grafana/plugins/grafana-clock-panel /grafana/data/plugins/grafana-clock-panel \
 	&& rm -rf grafana-4.6.3.linux-x64.tar.gz \	
 	&& apk del curl openssl
 
