@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-LABEL maintainer "Carlos Augusto Malucelli <raphaelfrancabsb@gmail.com>"
+LABEL maintainer "Raphael França <raphaelfrancabsb@gmail.com>"
 
 RUN apk update \
 	&& apk --no-cache add ca-certificates wget curl \
