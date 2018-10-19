@@ -1,9 +1,9 @@
 FROM alpine:3.7
 
-LABEL maintainer "Carlos Augusto Malucelli <malucellicarlos@gmail.com>"
+LABEL maintainer "Carlos Augusto Malucelli <raphaelfrancabsb@gmail.com>"
 
 RUN apk update \
-	&& apk add openssl curl \ 
+	&& apk --no-cache add ca-certificates curl \ 
 	&& curl -o /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub \
 	&& curl -LO https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.28-r0/glibc-2.28-r0.apk \
 	&& curl -LO https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-4.6.3.linux-x64.tar.gz \
